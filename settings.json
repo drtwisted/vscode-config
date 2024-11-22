@@ -1,0 +1,115 @@
+{
+    "window.zoomLevel": 0.4,
+    "workbench.iconTheme": "material-icon-theme",
+    "window.menuBarVisibility": "toggle",
+    "workbench.colorTheme": "Tokyo City Darker",
+    // Cursor setup
+    "editor.cursorStyle": "block-outline",
+    "editor.cursorSurroundingLines": 10,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": "on",
+    // Editor 
+    "editor.fontSize": 14,
+    "editor.smoothScrolling": true,
+    // Line numbers
+    "editor.lineNumbers": "relative", // Lines numbering strategy
+    // Whitespaces rendering
+    "editor.renderWhitespace": "all", // all - all the whitespaces, boundary - only the surrounding ones
+    // Editor rulers
+    "editor.rulers": [
+        80,
+        120
+    ],
+    // Title bar
+    "window.titleBarStyle": "native",
+    "window.commandCenter": true,
+    "window.dialogStyle": "custom",
+    "window.customTitleBarVisibility": "never",
+    "window.titleSeparator": " | ",
+    "window.density.editorTabHeight": "compact",
+    // Terminal setup
+    "terminal.integrated.stickyScroll.enabled": true,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.shellIntegration.history": 10000,
+    // Python setup START
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "gitlens.codeLens.symbolScopes": [
+            "!Module"
+        ],
+        "editor.formatOnType": true,
+        "editor.wordBasedSuggestions": "off",
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.defaultFoldingRangeProvider": "charliermarsh.ruff",
+    },
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.autoImportCompletions": false,
+    "python.analysis.completeFunctionParens": false,
+    "python.analysis.typeCheckingMode": "basic",
+    // general formatting
+    "files.trimTrailingWhitespace": false,
+    // linter formatting
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnPaste": true,
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        },
+        "bash (2)": {
+            "path": "/usr/bin/bash"
+        }
+    },
+    // Python setup END
+    "workbench.colorCustomizations": {
+        "[Forest Night Serenade]": {}
+    },
+    // My Code Actions Extension
+    "my-code-actions.actions": {
+        "[python]": {
+            "Create new function {{diag:$1}}()": {
+                "diagnostics": [
+                    "\"(.*?)\" is not defined"
+                ],
+                "text": "def {{diag:$1}}() -> None:\n    pass\n",
+                "insertFind": "{{diag:$1}}",
+                "wher": "beforeLast"
+            },
+            "Create new variable {{diag:$1}}=": {
+                "diagnostics": [
+                    "\"(.*?)\" is not defined"
+                ],
+                "text": "{{diag:$1}} = ",
+                "wher": "beforeLast"
+            },
+            "Create new class {{diag:$1}}": {
+                "diagnostics": [
+                    "\"(.*?)\" is not defined"
+                ],
+                "text": "class {{diag:$1}}():\n    pass\n",
+                "wher": "beforeLast"
+            }
+        }
+    },
+    "cSpell.userWords": [
+        "pydantic"
+    ],
+    "git.suggestSmartCommit": false,
+    "editor.accessibilitySupport": "off",
+}
